@@ -1,0 +1,145 @@
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f9f9f9;
+    padding-top: 80px;
+  }
+  
+  /* Layout Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 1000;
+  }
+  
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #007acc;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, color 0.3s;
+  }
+  
+  .nav a:hover {
+    background: #007acc;
+    color: white;
+  }
+  
+  /* Main Content */
+  .site-content {
+    padding: 40px 0;
+  }
+  
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    padding: 40px 0;
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: #005f99;
+  }
+  
+  /* Card Component */
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav a {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+  /* Section spacing */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Section Headings */
+  h2 {
+    margin-bottom: 20px;
+    color: #007acc;
+  }
+  
+  /* Background Utility */
+  .bg-light {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  /* List styling */
+  ul {
+    padding-left: 20px;
+  }
+  
+  

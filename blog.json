@@ -1,0 +1,27 @@
+
+[
+  {
+    "title": "🚀 How to Secure Microsoft 365 in 2024",
+    "description": "A step-by-step guide to locking down your cloud environment.",
+    "url": "post1.html",
+    "date": "2024-03-21"
+  },
+  {
+    "title": "🔧 Automating Azure with PowerShell",
+    "description": "How to streamline admin tasks using scripts.",
+    "url": "post2.html",
+    "date": "2024-03-19"
+  },
+  {
+    "title": "🛡️ Cybersecurity Best Practices for SMBs",
+    "description": "Protect your business with these key security steps.",
+    "url": "post3.html",
+    "date": "2024-03-15"
+  },
+  {
+    "title": "📢 What’s New in Cloud IT?",
+    "description": "Latest trends and insights for 2024.",
+    "url": "post4.html",
+    "date": "2024-03-10"
+  }
+]

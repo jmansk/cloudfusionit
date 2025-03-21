@@ -5,10 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog | CloudFusionIT</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .filter-bar input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #tagContainer {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 5px;
+      margin-top: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #ccc transparent;
+    }
+    #tagContainer::-webkit-scrollbar {
+      height: 6px;
+    }
+    #tagContainer::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+    }
+    .tag-btn {
+      background: #eee;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    .tag-btn.active {
+      background: #007acc;
+      color: white;
+    }
+    .clear-btn {
+      background: #f44336;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="logo">CloudFusionIT</div>
@@ -23,39 +68,93 @@
 
   <main class="site-content container">
     
-    <!-- Blog Header -->
     <section class="blog-header">
       <h1>Welcome to Our Blog</h1>
       <p>Insights, guides, and updates from CloudFusionIT.</p>
     </section>
 
-    <!-- Recent Posts (Loaded Dynamically) -->
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Search posts...">
+      <div id="tagContainer">
+        <button class="tag-btn clear-btn" id="clearFilters">Clear Filters</button>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
     <section class="recent-posts">
-      <h2>Recent Posts</h2>
       <div class="post-grid" id="posts-container">
-        <!-- JavaScript will load posts here -->
+        <!-- Posts will load here -->
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 CloudFusionIT | <a href="#">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
     </div>
   </footer>
 
-  <!-- JavaScript for Loading Blog Posts -->
   <script>
+    let allPosts = [];
+    let activeTag = "";
+
     async function loadPosts() {
       const response = await fetch("blog.json");
       const posts = await response.json();
+      allPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      renderTags(posts);
+      renderPosts(posts);
+    }
+
+    function renderTags(posts) {
+      const tagSet = new Set();
+      posts.forEach(post => post.tags.forEach(tag => tagSet.add(tag)));
+      const tagContainer = document.getElementById("tagContainer");
+
+      // Remove existing buttons except for "Clear Filters"
+      tagContainer.innerHTML = '<button class="tag-btn clear-btn" id="clearFilters">Clear Filters</button>';
+
+      tagSet.forEach(tag => {
+        const btn = document.createElement("button");
+        btn.textContent = tag;
+        btn.className = "tag-btn";
+        btn.onclick = () => {
+          document.querySelectorAll(".tag-btn").forEach(b => b.classList.remove("active"));
+          if (activeTag === tag) {
+            activeTag = "";
+          } else {
+            activeTag = tag;
+            btn.classList.add("active");
+          }
+          filterPosts();
+        };
+        tagContainer.appendChild(btn);
+      });
+
+      // Reattach event listener to Clear Filters button
+      document.getElementById("clearFilters").addEventListener("click", () => {
+        activeTag = "";
+        document.getElementById("searchInput").value = "";
+        document.querySelectorAll(".tag-btn").forEach(btn => btn.classList.remove("active"));
+        filterPosts();
+      });
+    }
+
+    function filterPosts() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = allPosts.filter(post => {
+        const matchesSearch = post.title.toLowerCase().includes(query) || post.description.toLowerCase().includes(query);
+        const matchesTag = activeTag === "" || post.tags.includes(activeTag);
+        return matchesSearch && matchesTag;
+      });
+      renderPosts(filtered);
+    }
+
+    function renderPosts(posts) {
       const container = document.getElementById("posts-container");
-
-      // Sort posts by date (newest first)
-      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
+      container.innerHTML = "";
       posts.forEach(post => {
         const postHTML = `
           <div class="card">
@@ -67,6 +166,8 @@
         container.innerHTML += postHTML;
       });
     }
+
+    document.getElementById("searchInput").addEventListener("input", filterPosts);
 
     loadPosts();
   </script>

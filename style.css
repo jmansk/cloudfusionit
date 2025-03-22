@@ -306,3 +306,38 @@ body {
     display: flex;
   }
 }
+
+/* Smooth Transitions */
+.card,
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Optional Utility Spacing */
+.mt-20 { margin-top: 20px; }
+.mt-40 { margin-top: 40px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-40 { margin-bottom: 40px; }
+
+/* Active Link Underline Animation (Optional) */
+.nav a.active {
+  position: relative;
+  border-bottom: none;
+}
+
+.nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007acc;
+  transition: transform 0.3s ease;
+  transform: scaleX(1);
+}
+
+.nav a:hover::after {
+  transform: scaleX(1.2);
+}
+

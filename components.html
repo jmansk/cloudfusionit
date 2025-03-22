@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Component Reference | YourCompany</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Component Reference | CloudFusionIT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <div class="logo">YourCompany</div>
+      <div class="logo">CloudFusionIT</div>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="#">Components</a>
+        <a href="components.html">Components</a>
       </nav>
     </div>
   </header>
@@ -21,53 +21,78 @@
   <main class="site-content container">
     <h1 class="text-center">Component Reference</h1>
 
+    <!-- Typography -->
     <section>
-      <h2>Typography</h2>
+      <h2>📚 Typography</h2>
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
-      <p>This is a standard paragraph to show the base font style and line height. It's clean and easy to read.</p>
+      <p>This is a standard paragraph to show the base font style and line height.</p>
+      <blockquote>This is a blockquote, used for emphasis or quotes.</blockquote>
     </section>
 
+    <!-- Layout Utilities -->
     <section>
-      <h2>Utility: .text-center</h2>
-      <p class="text-center">This text is centered using the <code>.text-center</code> utility class.</p>
+      <h2>📐 Layout Utilities</h2>
+      <div class="container bg-light">This box uses the <code>.container</code> and <code>.bg-light</code> utility classes.</div>
+      <p class="text-center">This paragraph uses <code>.text-center</code> to center the text.</p>
     </section>
 
+    <!-- Components -->
     <section>
-      <h2>Container</h2>
-      <div class="bg-light container">This box is constrained inside a <code>.container</code> class.</div>
-    </section>
+      <h2>🧩 UI Components</h2>
 
-    <section>
-      <h2>Button</h2>
+      <h3>Button</h3>
       <a href="#" class="btn">Primary Button</a>
-    </section>
 
-    <section>
-      <h2>Card Component</h2>
+      <h3>Card</h3>
       <div class="card">
         <h3>Example Card Title</h3>
-        <p>This is an example of a reusable card component. It uses padding, rounded corners, and a soft shadow.</p>
+        <p>This card uses padding, border-radius and a subtle shadow to stand out.</p>
         <a href="#" class="btn">Learn More</a>
+      </div>
+
+      <h3>Call To Action (CTA)</h3>
+      <a href="#" class="cta">Contact Us for a Free Audit</a>
+
+      <h3>Hero Section</h3>
+      <div class="hero">
+        <h1>Secure, Automate, Scale.</h1>
+        <p>Cloud-first MSP solutions built for modern businesses.</p>
+        <a href="#" class="btn">Get Started</a>
       </div>
     </section>
 
+    <!-- Blog Post Layout -->
     <section>
-      <h2>Navigation Bar (Header Preview)</h2>
-      <p>Scroll to the top of the page to view the fixed header with navigation.</p>
+      <h2>📄 Blog Post Structure</h2>
+      <article class="blog-post">
+        <h1>Post Title Example</h1>
+        <p class="author">By CloudFusionIT | April 2025</p>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Example Blog Image" />
+        <p>This is an example paragraph inside a blog post. Use this layout for all blog content to ensure visual consistency across your site.</p>
+        <h2>Subheading Example</h2>
+        <p>Each blog section should have clear structure and use semantic headings.</p>
+        <blockquote>This quote adds visual and contextual emphasis.</blockquote>
+        <a href="#" class="cta">Call to Action</a>
+      </article>
     </section>
 
+    <!-- Utility Classes -->
     <section>
-      <h2>Footer</h2>
-      <p>The footer appears at the bottom of every page. Scroll down to see it.</p>
+      <h2>🛠 Utility Classes</h2>
+      <ul>
+        <li><code>.text-center</code> – Center text inside any container</li>
+        <li><code>.container</code> – Adds horizontal margins and responsive width</li>
+        <li><code>.bg-light</code> – Light gray background for visual grouping</li>
+      </ul>
     </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 YourCompany | <a href="#">Privacy</a> | <a href="#">Contact</a></p>
+      <p>© 2025 CloudFusionIT | <a href="#">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
     </div>
   </footer>
 

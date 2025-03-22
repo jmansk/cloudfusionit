@@ -8,12 +8,20 @@
 </head>
 <body>
 
+  <!-- HEADER (NAVIGATION) -->
   <header class="site-header">
     <div class="container">
-      <div class="logo">CloudFusionIT</div>
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="logolight.png" alt="CloudFusionIT Logo" />
+          <span>CloudFusionIT</span>
+        </a>
+      </div>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="components.html">Components</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -45,10 +53,10 @@
       <h3>Button</h3>
       <a href="#" class="btn">Primary Button</a>
 
-      <h3>Card</h3>
+      <h3>Card (with hover effect)</h3>
       <div class="card">
         <h3>Example Card Title</h3>
-        <p>This card uses padding, border-radius and a subtle shadow to stand out.</p>
+        <p>This card now uses a hover effect that lifts the card and adds a shadow.</p>
         <a href="#" class="btn">Learn More</a>
       </div>
 
@@ -69,7 +77,7 @@
       <article class="blog-post">
         <h1>Post Title Example</h1>
         <p class="author">By CloudFusionIT | April 2025</p>
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Example Blog Image" />
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981d?auto=format&fit=crop&w=1200&q=80" alt="Example Blog Image" />
         <p>This is an example paragraph inside a blog post. Use this layout for all blog content to ensure visual consistency across your site.</p>
         <h2>Subheading Example</h2>
         <p>Each blog section should have clear structure and use semantic headings.</p>
@@ -85,6 +93,9 @@
         <li><code>.text-center</code> – Center text inside any container</li>
         <li><code>.container</code> – Adds horizontal margins and responsive width</li>
         <li><code>.bg-light</code> – Light gray background for visual grouping</li>
+        <li><code>.btn</code> – Primary blue button used across site</li>
+        <li><code>.cta</code> – Call-to-action styling for attention-grabbing links</li>
+        <li><code>.card:hover</code> – Subtle movement on hover for visual feedback</li>
       </ul>
     </section>
 

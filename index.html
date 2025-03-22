@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourCompany - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CloudFusionIT - Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -17,21 +17,28 @@
           <span>CloudFusionIT</span>
         </a>
       </div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
+
+      <!-- ✅ Toggle button for mobile menu -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+
+      <!-- ✅ Navigation menu with correct ID -->
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="active">Home</a>
         <a href="services.html">Services</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
-  
 
+  <!-- MAIN CONTENT -->
   <main class="site-content container">
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <h1>Welcome to YourCompany</h1>
+      <h1>Welcome to CloudFusionIT</h1>
       <p>Your trusted partner for cloud-first IT solutions.</p>
       <a href="services.html" class="btn">Explore Our Services</a>
     </section>
@@ -58,11 +65,11 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS / SOCIAL PROOF -->
+    <!-- TESTIMONIALS -->
     <section class="testimonials">
       <h2>What Our Clients Say</h2>
       <div class="testimonial">
-        <p>"YourCompany transformed our IT infrastructure. Highly recommend!"</p>
+        <p>"CloudFusionIT transformed our IT infrastructure. Highly recommend!"</p>
         <strong>- Happy Client</strong>
       </div>
       <div class="testimonial">
@@ -71,21 +78,30 @@
       </div>
     </section>
 
-    <!-- CALL TO ACTION -->
+    <!-- CTA BLOCK -->
     <section class="cta-block">
-        <h2>Ready to Take Your IT to the Next Level?</h2>
-        <a href="contact.html" class="btn">Get in Touch</a>
-      </section>
-      
+      <h2>Ready to Take Your IT to the Next Level?</h2>
+      <a href="contact.html" class="btn">Get in Touch</a>
+    </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 YourCompany | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
+      <p>© 2025 CloudFusionIT | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
     </div>
   </footer>
+
+  <!-- ✅ Mobile Menu Toggle Script -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>

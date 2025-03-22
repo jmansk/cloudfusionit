@@ -17,12 +17,16 @@
           <span>CloudFusionIT</span>
         </a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="components.html" class="active">Components</a>
       </nav>
+      
     </div>
   </header>
 
@@ -106,6 +110,17 @@
       <p>© 2025 CloudFusionIT | <a href="#">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
     </div>
   </footer>
+
+  <!-- ✅ Mobile Menu Toggle Script -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+  
 
 </body>
 </html>

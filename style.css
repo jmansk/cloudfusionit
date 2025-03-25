@@ -314,7 +314,7 @@ body {
   height: 3px;
   background-color: #007acc;
   display: block;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 
@@ -322,8 +322,7 @@ body {
 .section p {
   font-size: 1.1em;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   line-height: 1.75;
 }
 
@@ -343,35 +342,33 @@ body {
     position: absolute;
     right: 20px;
     top: 25px;
-    
   }
-
-  @media (max-width: 768px) {
-    .nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: white;
-      padding: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 999;
-    }
-
+  
+  .nav {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
   .nav.open {
     display: flex !important;
   }
-  
 }
-}
+
 /* Smooth Transitions */
 .card,
 .btn {
   transition: all 0.3s ease;
 }
 
+/* Contact Card */
 .contact-card {
   background: white;
   padding: 40px 30px;
@@ -394,7 +391,7 @@ body {
   height: 3px;
   background-color: #007acc;
   display: block;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 
@@ -409,6 +406,7 @@ body {
   margin-top: 10px;
 }
 
+/* Anchor Card */
 a.card {
   text-decoration: none;
   color: inherit;
@@ -421,6 +419,7 @@ a.card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Blog Card */
 .blog-card {
   display: flex;
   align-items: flex-start;
@@ -449,21 +448,9 @@ a.card:hover {
     align-items: center;
     text-align: center;
   }
-
+  
   .card-thumb {
     width: 100%;
     max-width: 300px;
   }
 }
-
-@media (max-width: 768px) {
-  .nav {
-    display: none !important;
-  }
-
-  .nav.open {
-    display: flex !important;
-  }
-}
-
-

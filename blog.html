@@ -176,19 +176,24 @@
     }
 
     function renderPosts(posts) {
-      const container = document.getElementById("posts-container");
-      container.innerHTML = "";
-      posts.forEach(post => {
-        const postHTML = `
-          <div class="card">
-            <h3>${post.title}</h3>
-            <p>${post.description}</p>
-            <a href="${post.url}" class="btn">Read More</a>
-          </div>
-        `;
-        container.innerHTML += postHTML;
-      });
-    }
+  const container = document.getElementById("posts-container");
+  container.innerHTML = "";
+  posts.forEach(post => {
+    const postHTML = `
+      <div class="card blog-card">
+        ${post.image ? `<img src="${post.image}" alt="Thumbnail for ${post.title}" class="card-thumb">` : ''}
+        <div class="card-content">
+          <h3>${post.title}</h3>
+          <p>${post.description}</p>
+          <a href="${post.url}" class="btn">Read More</a>
+        </div>
+      </div>
+    `;
+    container.innerHTML += postHTML;
+  });
+}
+
+
 
     document.getElementById("searchInput").addEventListener("input", filterPosts);
 

@@ -1,31 +1,10 @@
-
 [
   {
-    "title": "🚀 How to Secure Microsoft 365 in 2024",
-    "description": "A step-by-step guide to locking down your cloud environment.",
-    "url": "post1.html",
-    "date": "2024-03-21",
-    "tags": ["Security", "Microsoft 365", "Cloud"]
-  },
-  {
-    "title": "🔧 Automating Azure with PowerShell",
-    "description": "How to streamline admin tasks using scripts.",
-    "url": "post2.html",
-    "date": "2024-03-19",
-    "tags": ["Automation", "PowerShell", "Azure"]
-  },
-  {
-    "title": "🛡️ Cybersecurity Best Practices for SMBs",
-    "description": "Protect your business with these key security steps.",
-    "url": "post3.html",
-    "date": "2024-03-15",
-    "tags": ["Security", "SMBs"]
-  },
-  {
-    "title": "📢 What’s New in Cloud IT?",
-    "description": "Latest trends and insights for 2024.",
-    "url": "post4.html",
-    "date": "2024-03-10",
-    "tags": ["Cloud", "Trends", "2024"]
+    "title": "🤯 Why Does Cyber Essentials Have to Be So Complicated?",
+    "description": "Why small businesses struggle with CE and what actually helps — including templates and checklists.",
+    "url": "cyber-essentials-made-simple.html",
+    "date": "2025-03-25",
+    "tags": ["Cyber Essentials", "Compliance", "Small Business"],
+    "image": "images/confusedSmall.png"
   }
 ]

@@ -343,6 +343,7 @@ body {
     position: absolute;
     right: 20px;
     top: 25px;
+    
   }
 
   @media (max-width: 768px) {
@@ -454,4 +455,15 @@ a.card:hover {
     max-width: 300px;
   }
 }
+
+@media (max-width: 768px) {
+  .nav {
+    display: none !important;
+  }
+
+  .nav.open {
+    display: flex !important;
+  }
+}
+
 

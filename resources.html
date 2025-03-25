@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | CloudFusionIT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="logolight.png" alt="CloudFusionIT Logo">
+        <span>CloudFusionIT</span>
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="resources.html" class="active">Resources</a>
+      <a href="lab-notes.html">Lab Notes</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site-content container">
+  <section class="hero">
+    <h1>Tools, Links & Cheatsheets</h1>
+    <p>A growing collection of high-signal resources to help secure, automate, and simplify modern IT infrastructure.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Core Categories</h2>
+      <div class="service-grid">
+        <a href="#" class="card">
+          <h3>Cyber Essentials & CE+</h3>
+          <p>Policy templates, checklists, and tools to help meet compliance goals without corporate bloat.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>Microsoft 365 & Azure</h3>
+          <p>Secure baseline configs, identity setups, and automation for SMB-ready cloud environments.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>PowerShell / CLI Automation</h3>
+          <p>Handy scripts, command references, and walkthroughs that save time and reduce risk.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>Security Tools & Scanners</h3>
+          <p>Recommended open-source tools for auditing, scanning, and improving IT hygiene.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="text-center">Quick Access Links</h2>
+      <p class="text-center">When you're ready to add real content, this section can include direct links to GitHub, downloads, guides, or even filtered blog tags.</p>
+      <!-- Placeholder list -->
+      <ul style="max-width: 600px; margin: 20px auto; line-height: 1.8;">
+        <li><a href="#">[Sample] CE+ Self-Assessment Template</a></li>
+        <li><a href="#">[Sample] Microsoft Secure Score Quick Fixes</a></li>
+        <li><a href="#">[Sample] Entra Conditional Access Policy Sets</a></li>
+        <li><a href="#">[Sample] PowerShell Tenant Hardening Script</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 CloudFusionIT | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

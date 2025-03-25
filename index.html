@@ -18,72 +18,64 @@
         </a>
       </div>
 
-      <!-- ✅ Toggle button for mobile menu -->
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         &#9776;
       </button>
 
-      <!-- ✅ Navigation menu with correct ID -->
       <nav class="nav" id="mainNav">
         <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
         <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="lab-notes.html">Lab Notes</a>
+        <a href="start-here.html">Start Here</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
+  
+
   <!-- MAIN CONTENT -->
   <main class="site-content container">
-
-    <!-- HERO SECTION -->
     <section class="hero">
-      <h1>Welcome to CloudFusionIT</h1>
-      <p>Your trusted partner for cloud-first IT solutions.</p>
-      <a href="services.html" class="btn">Explore Our Services</a>
+      <h1>Disrupting IT, One Fix at a Time</h1>
+      <p>This isn't a company (yet). It's a project. A lab. A rebellion against bloated, overcomplicated IT — and you're welcome to watch it unfold.</p>
+      <a href="start-here.html" class="btn">Start Here</a>
     </section>
 
-    <!-- SERVICES OVERVIEW -->
     <section class="services">
-      <h2>What We Offer</h2>
       <div class="service-grid">
         <div class="card">
-          <h3>Cloud Security</h3>
-          <p>Lock down your Microsoft 365 environment with best-in-class security.</p>
-          <a href="services.html#cloud-security" class="btn">Learn More</a>
+          <h3>Firewall & Security Builds</h3>
+          <p>Hands-on guides using OPNsense, Entra, VPNs, segmentation and real-world configs built for CE/CE+ compliance.</p>
         </div>
         <div class="card">
           <h3>Automation & Scripting</h3>
-          <p>Boost efficiency with custom PowerShell and Python automation.</p>
-          <a href="services.html#automation" class="btn">Learn More</a>
+          <p>PowerShell, Bash and CLI-based workflows for real-world MSP and admin use. Time-saving tools, not theory.</p>
         </div>
         <div class="card">
-          <h3>IT Consulting</h3>
-          <p>Tailored IT solutions to help your business scale securely.</p>
-          <a href="services.html#consulting" class="btn">Learn More</a>
+          <h3>Cloud-First Strategy</h3>
+          <p>Smart design for small businesses using Microsoft 365, Intune, and Azure — without the enterprise complexity.</p>
+        </div>
+        <div class="card">
+          <h3>Compliance Made Practical</h3>
+          <p>Cyber Essentials and CE+ guidance written for people who actually have to implement it, not just check a box.</p>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial">
-        <p>"CloudFusionIT transformed our IT infrastructure. Highly recommend!"</p>
-        <strong>- Happy Client</strong>
-      </div>
-      <div class="testimonial">
-        <p>"We automated onboarding and saved 20+ hours per week thanks to their scripts!"</p>
-        <strong>- IT Manager</strong>
-      </div>
+    <section class="section text-center">
+      <h2>Where This Is Headed</h2>
+      <p>This isn’t just content. It’s groundwork. The long-term goal is to build tools, guides, and systems that actually serve SMBs — lean, secure, automated. No fluff. No noise. Just smart solutions that work.</p>
+      <p>If you’re here early, you’re part of the build process. Watch what’s coming. Or better — borrow what works and make it your own.</p>
     </section>
 
-    <!-- CTA BLOCK -->
     <section class="cta-block">
-      <h2>Ready to Take Your IT to the Next Level?</h2>
-      <a href="contact.html" class="btn">Get in Touch</a>
+      <h2>Want to Follow the Build?</h2>
+      <p>I’m not pushing anything. But if you want to stay in the loop, check the blog or drop me a line.</p>
+      <a href="contact.html" class="btn">Contact</a>
     </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -93,11 +85,10 @@
     </div>
   </footer>
 
-  <!-- ✅ Mobile Menu Toggle Script -->
+  <!-- Mobile Menu Script -->
   <script>
     const navToggle = document.getElementById('navToggle');
     const nav = document.getElementById('mainNav');
-
     navToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
     });

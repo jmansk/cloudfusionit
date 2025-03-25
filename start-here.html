@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here | CloudFusionIT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="logolight.png" alt="CloudFusionIT Logo">
+        <span>CloudFusionIT</span>
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="lab-notes.html">Lab Notes</a>
+      <a href="start-here.html" class="active">Start Here</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site-content container">
+  <section class="hero">
+    <h1>Welcome to CloudFusionIT</h1>
+    <p>Here’s your first stop. If you're new here, this page will get you up to speed — fast.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Who This Is For</h2>
+      <p>If you work in IT, support small businesses, manage cloud environments, or just like solving problems with automation — you’re in the right place.</p>
+      <p>This project is built for engineers, tinkerers, and forward-thinking MSPs who want to cut through the noise.</p>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="text-center">What You’ll Find</h2>
+      <div class="service-grid">
+        <a href="resources.html" class="card">
+          <h3>Resources</h3>
+          <p>Scripts, policy templates, and guides to speed up your work and help stay compliant.</p>
+        </a>
+        <a href="lab-notes.html" class="card">
+          <h3>Lab Notes</h3>
+          <p>Real-world experiments — sometimes rough, always honest. Configs and test logs included.</p>
+        </a>
+        <a href="blog.html" class="card">
+          <h3>Blog</h3>
+          <p>More structured thoughts on strategy, design choices, and bigger-picture thinking.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container text-center">
+      <h2>Top Picks to Start Reading</h2>
+      <p>Coming soon: I’ll highlight key posts, lab notes, or walkthroughs worth your time.</p>
+      <!-- Future: list of links to specific blog posts or lab notes -->
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container text-center">
+      <h2>How to Navigate</h2>
+      <p>Most of what’s here is structured for speed: short posts, linked scripts, and standalone guides.
+        Use the top nav, search the blog, or just head to Resources if you're looking to build fast.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 CloudFusionIT | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Notes | CloudFusionIT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="logolight.png" alt="CloudFusionIT Logo">
+        <span>CloudFusionIT</span>
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="lab-notes.html" class="active">Lab Notes</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site-content container">
+  <section class="hero">
+    <h1>Lab Notes</h1>
+    <p>Experiments, prototypes, and behind-the-scenes breakdowns of things I’m building, breaking, and fixing.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Recent Experiments</h2>
+      <div class="service-grid">
+        <a href="#" class="card">
+          <h3>OPNsense + CE+ Configs</h3>
+          <p>Working firewall builds that pass CE+ scans. Includes segmentation, VPN with MFA, and hardening tweaks.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>OneDrive Tenant Migration</h3>
+          <p>Automating cross-tenant file migrations using PnP PowerShell and background jobs on a persistent VM.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>Intune Policy Lab</h3>
+          <p>Testing device compliance baselines, app deployment, and conditional access edge cases.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>Domain Controller Jumpbox</h3>
+          <p>Running a secure DC at home with remote VPN access to test AD scripts and hybrid Azure join scenarios.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container text-center">
+      <h2>What This Page Is</h2>
+      <p>This isn’t a polished blog — it’s where I document builds, failed attempts, and rough configs worth sharing.
+        Sometimes it’s useful. Sometimes it’s a warning.
+        Either way, if it saves you hours, that’s the point.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 CloudFusionIT | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

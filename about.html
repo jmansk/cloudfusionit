@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | CloudFusionIT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="logolight.png" alt="CloudFusionIT Logo" />
+        <span>CloudFusionIT</span>
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html" class="active">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="lab-notes.html">Lab Notes</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="site-content container">
+    <section class="hero">
+        <h1>Disrupting IT, One Fix at a Time</h1>
+        <p>This isn't a company (yet). It's a project. A lab. A rebellion against bloated, overcomplicated IT — and you're welcome to watch it unfold.</p>
+      </section>
+      <section class="section section--light">
+        <div class="container">
+          <h2 class="text-center mb-20">Why I Started This</h2>
+          <p>I’ve worked in IT long enough to see how broken it is — especially for small businesses. Expensive tools, poor documentation, security bolt-ons that barely work. It doesn’t have to be this way.</p>
+          <p>CloudFusionIT started as a side project to simplify modern IT — not just for me, but for anyone else tired of the same mess.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center mb-20">What You’ll Find Here</h2>
+          <div class="service-grid">
+            <div class="card">
+              <h3>Firewall & Security Builds</h3>
+              <p>Hands-on guides using OPNsense, Entra, VPNs, segmentation and real-world configs built for CE/CE+ compliance.</p>
+            </div>
+            <div class="card">
+              <h3>Automation & Scripting</h3>
+              <p>PowerShell, Bash and CLI-based workflows for real-world MSP and admin use. Time-saving tools, not theory.</p>
+            </div>
+            <div class="card">
+              <h3>Cloud-First Strategy</h3>
+              <p>Smart design for small businesses using Microsoft 365, Intune, and Azure — without the enterprise complexity.</p>
+            </div>
+            <div class="card">
+              <h3>Compliance Made Practical</h3>
+              <p>Cyber Essentials and CE+ guidance written for people who actually have to implement it, not just check a box.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--light">
+        <div class="container">
+          <h2 class="text-center mb-20">Where This Is Headed</h2>
+          <p>This isn't just content. It’s groundwork. The long-term goal is to build tools, guides, and systems that actually serve SMBs — lean, secure, automated. No fluff. No noise. Just smart solutions that work.</p>
+          <p>If you’re here early, you’re part of the build process. Watch what’s coming. Or better — borrow what works and make it your own.</p>
+        </div>
+      </section>
+      <section class="cta-block">
+        <h2>Want to Follow the Build?</h2>
+        <p>I’m not pushing anything. But if you want to stay in the loop, check the blog or drop me a line.</p>
+        <a href="contact.html" class="btn">Contact</a>
+      </section>
+                              
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 CloudFusionIT | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

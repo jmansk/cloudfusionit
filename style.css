@@ -345,24 +345,26 @@ body {
     top: 25px;
   }
 
-  .nav {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: white;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
 
   .nav.open {
-    display: flex;
+    display: flex !important;
   }
+  
 }
-
+}
 /* Smooth Transitions */
 .card,
 .btn {

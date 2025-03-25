@@ -50,11 +50,27 @@
       background: #f44336;
       color: white;
     }
+    .blog-header {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to right, #007acc, #00b4d8);
+      color: white;
+      margin-bottom: 40px;
+    }
+    .blog-header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    .blog-header p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER (NAVIGATION) -->
   <header class="site-header">
     <div class="container">
       <div class="logo">
@@ -63,11 +79,7 @@
           <span>CloudFusionIT</span>
         </a>
       </div>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        &#9776;
-      </button>
-      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
       <nav class="nav" id="mainNav">
         <a href="index.html">Home</a>
         <a href="blog.html" class="active">Blog</a>
@@ -75,21 +87,22 @@
         <a href="resources.html">Resources</a>
         <a href="lab-notes.html">Lab Notes</a>
         <a href="start-here.html">Start Here</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      
-      
     </div>
   </header>
 
   <main class="site-content container">
-    
+
     <section class="blog-header">
-      <h1>Welcome to Our Blog</h1>
-      <p>Insights, guides, and updates from CloudFusionIT.</p>
+      <h1>Ideas, Fixes & Frameworks</h1>
+      <p>
+        This is where theory meets practicality. No fluff. No filler. Just sharp takes,
+        hard-won lessons, and workflows that actually make your job easier. Whether you're
+        here to automate, secure, or simplify — you're in good company.
+      </p>
     </section>
 
-    <!-- Filter Bar -->
     <section class="filter-bar">
       <input type="text" id="searchInput" placeholder="Search posts...">
       <div id="tagContainer">
@@ -97,7 +110,6 @@
       </div>
     </section>
 
-    <!-- Blog Posts -->
     <section class="recent-posts">
       <div class="post-grid" id="posts-container">
         <!-- Posts will load here -->
@@ -128,10 +140,7 @@
       const tagSet = new Set();
       posts.forEach(post => post.tags.forEach(tag => tagSet.add(tag)));
       const tagContainer = document.getElementById("tagContainer");
-
-      // Remove existing buttons except for "Clear Filters"
       tagContainer.innerHTML = '<button class="tag-btn clear-btn" id="clearFilters">Clear Filters</button>';
-
       tagSet.forEach(tag => {
         const btn = document.createElement("button");
         btn.textContent = tag;
@@ -148,8 +157,6 @@
         };
         tagContainer.appendChild(btn);
       });
-
-      // Reattach event listener to Clear Filters button
       document.getElementById("clearFilters").addEventListener("click", () => {
         activeTag = "";
         document.getElementById("searchInput").value = "";
@@ -188,16 +195,13 @@
     loadPosts();
   </script>
 
-  <!-- ✅ Mobile Menu Toggle Script -->
   <script>
     const navToggle = document.getElementById('navToggle');
     const nav = document.getElementById('mainNav');
-
     navToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
   </script>
-
 
 </body>
 </html>

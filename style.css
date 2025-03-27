@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+
+
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.7;
@@ -19,6 +22,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 
 /* Header Navigation */
 .site-header {
@@ -41,26 +45,32 @@ body {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
   color: #007acc;
 }
 
 .logo-link img {
+  display: block;
   height: 48px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
-.logo-link span {
-  font-size: 1.5em;
-  font-weight: bold;
-}
 
 .nav {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
 }
@@ -105,18 +115,18 @@ body {
   text-align: center;
   padding: 100px 20px 80px 20px;
   background: linear-gradient(to right, #1e293b, #334155); /* softer, slate-style blues */
-  color: white;
+color: #f0f0f0;
 }
 .hero.home {
   position: relative;
-  background: url('images/cityScape.png') center/cover no-repeat;
+  background: url('/Assets/heroIndex.png') center/cover no-repeat;
   color: white;
 }
 .hero.home::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* adjust 0.3–0.5 depending on image brightness */
+  background: rgba(0, 0, 0, 0.5); /* adjust 0.3–0.5 depending on image brightness */
   z-index: 0;
 }
 /* Make sure text sits above the overlay */
@@ -125,9 +135,13 @@ body {
   z-index: 1;
 }
 
+
+
 .hero h1 {
-  font-size: 3.2em;
-  margin-bottom: 12px;
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
 }
 
 .hero p {
@@ -136,10 +150,39 @@ body {
   max-width: 720px;
 }
 
-.hero .btn {
-  padding: 14px 28px;
-  font-size: 1.1em;
+.hero .hero-subtext {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #f0f0f0;
+  max-width: 680px;
+  margin: 0 auto 30px;
 }
+
+.hero h1,
+.hero p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* smooth, not too hard */
+}
+
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #f0f0f0;
+  background: rgba(30, 58, 138, 0.6); /* subtle dark blue */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(8px); /* glass effect */
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: rgba(30, 58, 138, 0.85); /* brighten slightly */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Services Section */
 .services {
@@ -249,21 +292,30 @@ body {
 .mb-20 { margin-bottom: 20px; }
 .mb-40 { margin-bottom: 40px; }
 
-/* Buttons */
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #007acc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #1e293b; /* Slate/dark text for contrast */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 12px 24px; /* slightly increased vertical padding */
+  font-size: 1em;
   font-weight: 500;
-  transition: background 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-decoration: none;
+  
 }
 
 .btn:hover {
-  background: #005fa3;
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+  cursor: pointer;
 }
+
+
 
 /* Blog Post Styling */
 .blog-post {
@@ -533,6 +585,12 @@ body {
   color: #1e293b; /* slate-800 */
 }
 
+.cta-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* faint grey line */
+  margin: 20px auto;
+  max-width: 240px;
+}
 
 
 
